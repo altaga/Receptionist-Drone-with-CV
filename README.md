@@ -51,15 +51,13 @@ Python Libraries:
 
 ## Spresense Hardware:
 
+Diagram Connections.
 <img src="https://i.ibb.co/7t6VXcG/Spresense-1.png" width="1000">
 
 We need to make the following hardware connections in order to develope this project.
 
-- The MB1040 sensor will be used to detect when there is a customer near the device.
-- The potentiometer will help us to modify the volume of the system easily.
-- The speaker will provide us the output of the message that will be told to the customers.
-- The button is used to activate the serial port to send the message that will call the Drone.
-- The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
+Real Connections.
+<img src="https://i.ibb.co/5c34Bk7/IMG-3309.jpg" width="1000">
 
 ## Spresense Software:
 
@@ -70,13 +68,35 @@ Official guide: https://developer.sony.com/develop/spresense/developer-tools/get
 Since we connect the board to the Arduino IDE, we will have to carry out a previous procedure to be able to flash the code in the "Arduino Code" folder.
 
 - Format the SD card (Highly Recommended).
+- Paste the file in the "Audio" folder in the SD.
 - Plug the SD card in the Board.
 - Open the following example code of the Arduino IDE.
 <img src="https://i.ibb.co/Dp56GW1/Spresense-2.png" width="800">
+- Flash the code on the board and opens the serial monitor.
+// Serial monitor image
+- Select option 1 to mount the decoder to the SD.
+// Image of the option.
+- Once this is done, you can flash the code in the "Arduino Code" folder on the board.
 
+We attach some videos of the operation of the system, which has the following functions.
 
+- The MB1040 sensor will be used to detect when there is a customer near the device.
+- The potentiometer will help us to modify the volume of the system easily.
+- The speaker will provide us the output of the message that will be told to the customers.
+- The button is used to activate the serial port to send the message that will call the Drone.
+- The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
 
-## Tello Important Features:
+Video 1: Detection, Volume and Speaker.
+
+[![Video 1: Detection, Volume and Speaker.](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NYCS-bull-trans-1.svg/1024px-NYCS-bull-trans-1.svg.png)](https://youtu.be/dQ3Qmobqo6U)
+
+Video 2: Serial Distance and Drone Call.
+
+[![Video 2: Serial Distance and Drone Call.](https://bciconline.com/wp-content/uploads/2017/10/2.png)](Pend)
+
+## Tello Important Considerations:
+
+- Check the 
 
 ## Tello Software:
 
