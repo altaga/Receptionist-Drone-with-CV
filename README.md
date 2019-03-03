@@ -101,7 +101,7 @@ Video 2: Serial Distance and Drone Call.
 - Check the propeller order, if the order of the propellers is not correct, the drone will not fly.
 <img src="https://i.ibb.co/QJxjrsX/Correct-Drone-Propeller.png" width="600">
 
-- This drone is very unstable outdoors because the wind affects its stability very much, I recommend it only be used for indoor applications.
+- This drone is very unstable outdoors because the wind affects it, I recommend it only be used for indoor applications.
 
 - I recommend using a protective cage so that the drone is 100% safe.
 
@@ -112,6 +112,40 @@ Video 2: Serial Distance and Drone Call.
 - Always check the battery level of the drone, if the battery is less than 10% the drone will not take off, also if it is flying and reaches 10% the drone will land.
 
 ## Tello Software:
+
+Libraries that you have to install before continue.
+
+- https://pypi.org/project/tellopy/
+- https://pypi.org/project/pyserial/
+- https://pypi.org/project/av/
+- https://pypi.org/project/opencv-python/
+- https://pypi.org/project/numpy/
+
+The flight algorithm of the Drone is based on pure programming along with the libraries that were previously commented, the algorithm reviews at all times that there is a human face in front of it and looks for the way to focus and approach.
+
+Face recognition is done using Face Detection using Haar Cascades, the Haar Cascade file used will be in the "Haar" folder, more information in the link below.
+
+Link: https://docs.opencv.org/3.4.3/d7/d8b/tutorial_py_face_detection.html
+
+It is important to mention, this code provide the method to check all the sensors of the drone, for example the height, the level of the battery, position, etc ... However in the code it is only attached that in the OpenCV screen it will be displayed all the time the level of the battery.
+
+    def handler(event, sender, data, **args):
+        global prev_flight_data
+        global battery
+        drone = sender
+        if event is drone.EVENT_FLIGHT_DATA:
+            if prev_flight_data != str(data):
+                #print(data)
+                datas=str(data)
+                num = datas.find("BAT")
+                battery=int(datas[num+4:-31])
+                print("Battery:" + str(battery))
+                prev_flight_data = str(data)
+        else:
+            print('event="%s" data=%s' % (event.getname(), str(data)))
+            
+            
+<img src="https://i.ibb.co/n0SPQpc/rep.png" width="1000">
 
 ## System Connection Diagram:
 
