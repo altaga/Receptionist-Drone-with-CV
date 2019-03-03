@@ -100,7 +100,7 @@ Note 1: The Push Button libraries do not work on this board so we made our own d
         }
       }
 
-Note 2: El MB1040 tiene una salida analogica la cual tiene que ser convertida a distancia, la parte del codigo que realiza esta conversion es la siguiente, la distancia esta mostrada en metros.
+Note 2: The MB1040 has an analog output which has to be converted to distance, the part of the code that performs this conversion is the following, the distance is shown in meters.
 
     distance=((sensorValue*0.00976*3)/0.3858); 
 
