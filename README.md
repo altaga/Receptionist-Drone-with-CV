@@ -88,11 +88,11 @@ We attach some videos of the operation of the system, which has the following fu
 
 Video 1: Detection, Volume and Speaker.
 
-[![Video 1: Detection, Volume and Speaker.](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NYCS-bull-trans-1.svg/1024px-NYCS-bull-trans-1.svg.png)](https://youtu.be/dQ3Qmobqo6U)
+[![Video 1: Detection, Volume and Speaker.](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NYCS-bull-trans-1.svg/1024px-NYCS-bull-trans-1.svg.png | width=200)](https://youtu.be/dQ3Qmobqo6U)
 
 Video 2: Serial Distance and Drone Call.
 
-[![Video 2: Serial Distance and Drone Call.](https://bciconline.com/wp-content/uploads/2017/10/2.png)](Pend)
+[![Video 2: Serial Distance and Drone Call.](https://bciconline.com/wp-content/uploads/2017/10/2.png)](https://youtu.be/ojqytcHTXnQ)
 
 ## Tello Important Considerations:
 
