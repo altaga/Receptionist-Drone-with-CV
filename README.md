@@ -147,6 +147,14 @@ It is important to mention, this code provide the method to check all the sensor
             
 <img src="https://i.ibb.co/n0SPQpc/rep.png" width="1000">
 
+The system works like a state machine, because it keeps the state of the machine and as the case requires the command that requires the drone to approach the client, with this type of system we avoid sending commands that are useless to the drone.
+
+Lateral Fly Control Diagram (This is the diagram of how the drone moves if you are looking it from the side):
+<img src="https://i.ibb.co/qmyyPNW/Control.png" width="1000">
+
+Frontal Fly Control Diagram (This is the diagram of how the drone moves if you are looking it from the front):
+<img src="https://i.ibb.co/nCCYmbw/Frontal-control-diagram.png" width="1000">
+
 ## System Connection Diagram:
 
 ## The Final Product:
