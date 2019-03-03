@@ -100,10 +100,15 @@ Video 2: Serial Distance and Drone Call.
 
 - Check the propeller order, if the order of the propellers is not correct, the drone will not fly.
 <img src="https://i.ibb.co/QJxjrsX/Correct-Drone-Propeller.png" width="600">
+
 - This drone is very unstable outdoors because the wind affects its stability very much, I recommend it only be used for indoor applications.
+
 - I recommend using a protective cage so that the drone is 100% safe.
+
 <img src="https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/01/14/goods_img_big-v1/20190114092657_21926.jpg" width="600">
+
 - If you use the protective cage the drone can not make flips, if you try the drone will fall and hit.
+
 - Always check the battery level of the drone, if the battery is less than 10% the drone will not take off, also if it is flying and reaches 10% the drone will land.
 
 ## Tello Software:
