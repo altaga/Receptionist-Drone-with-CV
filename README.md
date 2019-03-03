@@ -173,7 +173,7 @@ Frontal Fly Control Diagram (This is the diagram of how the drone moves if you a
 
 ## System Connection Diagram:
 
-
+<img src="https://i.ibb.co/4Zz9tCM/Spresense-Diagram-bb.png" width="1000">
 
 ## The Final Product:
 
