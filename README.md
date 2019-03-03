@@ -20,9 +20,33 @@ Always use technology to improve the world, if you are a black hat or gray hat h
 
 ## Introduction:
 
+We will use the Spresense development board which will be able to interact with hotel users via Computer Vision. We know that there are robots receptionists and even robots with dinosaur forms that take orders in restaurants, but a drone that performs such work has been seldom seen. 
+
+<img src="https://i.ibb.co/164hWN4/Drone-Botones.png" width="1000">
+
+Through an Spresense development board and one ultrasonic distance sensor will detect customers and the drone accompanies the client to the reception, to make his check in or booking.
+
 ## Materials:
 
+Hardware: 
+
+- Spresense development board. 
+- LV-MaxSonar-EZ4(MB1040)
+- Micro Sd Card (in this case 16 Gb but any memory works).
+- Speaker with integrated lithium Battery.
+- DJI Drone Tello.
+- RaspberryPi or any machine with Python (In this case my Laptop).
+
+Software: 
+
+- Arduino IDE. 
+- Python.
+--TelloPy.
+--OpenCV.
+
 ## Spresense Hardware:
+
+
 
 ## Spresense Software:
 
