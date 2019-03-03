@@ -32,6 +32,8 @@ Hardware:
 
 - Spresense development board. 
 - LV-MaxSonar-EZ4(MB1040)
+- Potentiometer 10k.
+- A big red Button.
 - Micro Sd Card (in this case 16 Gb but any memory works).
 - Speaker with integrated lithium Battery.
 - DJI Drone Tello.
@@ -41,14 +43,27 @@ Software:
 
 - Arduino IDE. 
 - Python.
---TelloPy.
---OpenCV.
+
+Python Libraries:
+
+- TelloPy.
+- OpenCV.
 
 ## Spresense Hardware:
 
+<img src="https://i.ibb.co/7t6VXcG/Spresense-1.png" width="1000">
 
+We need to make the following hardware connections in order to develope this project.
+
+- The MB1040 sensor will be used to detect when there is a customer near the device.
+- The potentiometer will help us to modify the volume of the system easily.
+- The speaker will provide us the output of the message that will be told to the customers.
+- The button is used to activate the serial port to send the message that will call the Drone.
+- The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
 
 ## Spresense Software:
+
+
 
 ## Tello Important Features:
 
