@@ -88,6 +88,22 @@ We attach some videos of the operation of the system, which has the following fu
 - The button is used to activate the serial port to send the message that will call the Drone.
 - The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
 
+Note 1: The Push Button libraries do not work on this board so we made our own debounce algorithm to operate the button correctly.
+
+      if (digitalRead(2)==LOW)
+      {
+        delay(10);
+        if((digitalRead(2)==LOW))
+        {
+          puts("Calling Drone");
+          delay(3000);
+        }
+      }
+
+Note 2: El MB1040 tiene una salida analogica la cual tiene que ser convertida a distancia, la parte del codigo que realiza esta conversion es la siguiente, la distancia esta mostrada en metros.
+
+    distance=((sensorValue*0.00976*3)/0.3858); 
+
 Video 1: Detection, Volume and Speaker.
 
 [![Video 1: Detection, Volume and Speaker.](https://i.ibb.co/QQ985bK/1.png)](https://youtu.be/dQ3Qmobqo6U)
@@ -156,6 +172,8 @@ Frontal Fly Control Diagram (This is the diagram of how the drone moves if you a
 <img src="https://i.ibb.co/nCCYmbw/Frontal-control-diagram.png" width="1000">
 
 ## System Connection Diagram:
+
+
 
 ## The Final Product:
 
