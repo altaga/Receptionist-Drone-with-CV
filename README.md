@@ -63,6 +63,17 @@ We need to make the following hardware connections in order to develope this pro
 
 ## Spresense Software:
 
+In order to program the Spresense development board, it is essential to follow the official SONY guide, before following this manual it is absolutely necessary to follow it:
+
+Official guide: https://developer.sony.com/develop/spresense/developer-tools/get-started-using-arduino-ide/set-up-the-arduino-ide
+
+Since we connect the board to the Arduino IDE, we will have to carry out a previous procedure to be able to flash the code in the "Arduino Code" folder.
+
+- Format the SD card (Highly Recommended).
+- Plug the SD card in the Board.
+- Open the following example code of the Arduino IDE.
+<img src="https://i.ibb.co/Dp56GW1/Spresense-2.png" width="800">
+
 
 
 ## Tello Important Features:
