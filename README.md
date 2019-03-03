@@ -88,7 +88,7 @@ We attach some videos of the operation of the system, which has the following fu
 
 Video 1: Detection, Volume and Speaker.
 
-[![Video 1: Detection, Volume and Speaker.](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NYCS-bull-trans-1.svg/1024px-NYCS-bull-trans-1.svg.png | width=200)](https://youtu.be/dQ3Qmobqo6U)
+[![Video 1: Detection, Volume and Speaker.](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NYCS-bull-trans-1.svg/1024px-NYCS-bull-trans-1.svg.png )](https://youtu.be/dQ3Qmobqo6U){:height="50%" width="50%"}
 
 Video 2: Serial Distance and Drone Call.
 
