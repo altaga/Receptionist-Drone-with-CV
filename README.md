@@ -52,12 +52,12 @@ Python Libraries:
 ## Spresense Hardware:
 
 Diagram Connections.
-<img src="https://i.ibb.co/7t6VXcG/Spresense-1.png" width="1000">
+<img src="https://i.ibb.co/vcz2CsV/Spresense-bb.png" width="1000">
 
 We need to make the following hardware connections in order to develope this project.
 
 Real Connections.
-<img src="https://i.ibb.co/5c34Bk7/IMG-3309.jpg" width="1000">
+<img src="https://i.ibb.co/5c34Bk7/IMG-3309.jpg" width="600">
 
 ## Spresense Software:
 
