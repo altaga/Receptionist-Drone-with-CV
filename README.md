@@ -1,7 +1,7 @@
 # Receptionist Drone with CV
 In the world we have seen many applications for drones; races, shows, but we have never seen a more social drone application. That is why we will make, perhaps the first receptionist drone in the world.
 
-[![Gif](https://media.giphy.com/media/ywb359jnA9LLnKg3iQ/giphy.gif)]
+<img src="https://i.ibb.co/NnVwsLg/img.png" width="1000">
 
 Always use technology to improve the world, if you are a black hat or gray hat hacker please abstain at this point ......... or at least leave your star to make me feel less guilty XP.
 
