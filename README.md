@@ -1,5 +1,5 @@
 # Receptionist Drone with CV
-In the world we have seen many applications for drones; races, shows, but we have never seen a more social drone application. That is why we will make, perhaps the first receptionist drone in the world.
+We have seen many applications for drones; races, shows, and several others. But we have never seen a more social drone application. That is why we will make, perhaps the first receptionist drone in the world.
 
 <img src="https://i.ibb.co/NnVwsLg/img.png" width="1000">
 
@@ -24,7 +24,7 @@ We will use the Spresense development board which will be able to interact with 
 
 <img src="https://i.ibb.co/164hWN4/Drone-Botones.png" width="1000">
 
-Through an Spresense development board and one ultrasonic distance sensor will detect customers and the drone accompanies the client to the reception, to make his check in or booking.
+Through an Spresense development board and one ultrasonic distance sensor, we will detect customers and the drone will show the way to the client to arrive to reception, to make his check-in or booking.
 
 ## Materials:
 
@@ -51,7 +51,7 @@ Python Libraries:
 
 ## Spresense Hardware:
 
-Diagram Connections.
+Connections Diagram.
 
 <img src="https://i.ibb.co/vcz2CsV/Spresense-bb.png" width="1000">
 
@@ -63,24 +63,24 @@ Real Connections.
 
 ## Spresense Software:
 
-In order to program the Spresense development board, it is essential to follow the official SONY guide, before following this manual it is absolutely necessary to follow it:
+In order to program the Spresense development board, it is essential to follow the official SONY guide:
 
 Official guide: https://developer.sony.com/develop/spresense/developer-tools/get-started-using-arduino-ide/set-up-the-arduino-ide
 
-Since we connect the board to the Arduino IDE, we will have to carry out a previous procedure to be able to flash the code in the "Arduino Code" folder.
+Since we are using the Arduino IDE, we will have to carry out a procedure to be able to flash the code in the "Arduino Code" folder.
 
 - Format the SD card (Highly Recommended).
 - Paste the file in the "Audio" folder in the SD.
 - Plug the SD card in the Board.
 - Open the following example code of the Arduino IDE.
 <img src="https://i.ibb.co/Dp56GW1/Spresense-2.png" width="800">
-- Flash the code on the board and opens the serial monitor.
+- Flash the code on the board and open the serial monitor.
 <img src="https://i.ibb.co/qB2hGhY/Capture.png" width="800">
 - Select option 1 to mount the decoder to the SD.
 <img src="https://i.ibb.co/cQMv76Z/Capture1.png" width="800">
 - Once this is done, you can flash the code in the "Arduino Code" folder on the board.
 
-We attach some videos of the operation of the system, which has the following functions.
+We attached some videos of the operation of the system, which has the following functions.
 
 - The MB1040 sensor will be used to detect when there is a customer near the device.
 - The potentiometer will help us to modify the volume of the system easily.
