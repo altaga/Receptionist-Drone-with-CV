@@ -91,8 +91,8 @@ We attached some videos of the operation of the system, but first check what the
 
 The MB1040 has an analog output which has to be converted to distance, the formula by performing the corresponding convertion is the following.
 
-<img src="https://i.ibb.co/RBKhd0r/Code-Cogs-Eqn.gif" width="800">
-<img src="https://i.ibb.co/ZmH9mNF/Code-Cogs-Eqn-1.gif" width="800">
+<img src="https://i.ibb.co/RBKhd0r/Code-Cogs-Eqn.gif">
+<img src="https://i.ibb.co/ZmH9mNF/Code-Cogs-Eqn-1.gif">
 
 The part of the code that performs this conversion is the following, the distance is shown in meters.
 
