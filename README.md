@@ -181,6 +181,8 @@ This is our general connection diagram.
 
 After all this process we have our receptionist drone!
 
+Video: Click on the image:
+
 [![Receptionist Drone with CV](https://i.ibb.co/164hWN4/Drone-Botones.png)](https://www.youtube.com/watch?v=3FCZAMbMd8s)
 
 ## Comments:
