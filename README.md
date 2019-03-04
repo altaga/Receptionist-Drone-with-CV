@@ -198,7 +198,7 @@ Face recognition on drones will be a vital part moving forward, in order to disr
 
 All the information about the technology used, and direct references are in our wiki:
 
-Wiki: 
+Wiki: https://github.com/altaga/Receptionist-Drone-with-CV/wiki
 
 Top:
 
