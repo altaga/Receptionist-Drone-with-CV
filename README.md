@@ -112,6 +112,9 @@ Video 2: Serial Distance and Drone Call.
 
 [![Video 2: Serial Distance and Drone Call.](https://i.ibb.co/SBbyjKt/2.png)](https://youtu.be/ojqytcHTXnQ)
 
+
+<img src="https://i.ibb.co/NnVwsLg/img.png" width="1000">
+
 ## Tello Important Considerations:
 
 - Check the propeller order, if the order of the propellers is not correct, the drone will not fly.
@@ -173,9 +176,15 @@ Frontal Fly Control Diagram (This is the diagram of how the drone moves if you a
 
 ## System Connection Diagram:
 
+This is our general connection diagram.
+
 <img src="https://i.ibb.co/4Zz9tCM/Spresense-Diagram-bb.png" width="1000">
 
 ## The Final Product:
+
+After all this process we have our receptionist drone!
+
+[![Receptionist Drone with CV](https://i.ibb.co/164hWN4/Drone-Botones.png)](https://www.youtube.com/watch?v=3FCZAMbMd8s)
 
 ## Comments:
 
