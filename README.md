@@ -67,10 +67,9 @@ In order to program the Spresense development board, it is essential to follow t
 
 Official guide: https://developer.sony.com/develop/spresense/developer-tools/get-started-using-arduino-ide/set-up-the-arduino-ide
 
-Since we are using the Arduino IDE, we will have to carry out a procedure to be able to flash the code in the "Arduino Code" folder.
+Since we are using the Arduino IDE, we will have to carry out this procedure to be able to flash the code you can find in the "Arduino Code" folder (at the bottom).
 
 - Format the SD card (Highly Recommended).
-- Paste the file in the "Audio" folder in the SD.
 - Plug the SD card in the Board.
 - Open the following example code of the Arduino IDE.
 <img src="https://i.ibb.co/Dp56GW1/Spresense-2.png" width="800">
@@ -84,11 +83,11 @@ We attached some videos of the operation of the system, which has the following 
 
 - The MB1040 sensor will be used to detect when there is a customer near the device.
 - The potentiometer will help us to modify the volume of the system easily.
-- The speaker will provide us the output of the message that will be told to the customers.
+- The speaker will provide us the output of the message that will be played to the customers.
 - The button is used to activate the serial port to send the message that will call the Drone.
 - The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
 
-Note 1: The Push Button libraries do not work on this board so we made our own debounce algorithm to operate the button correctly.
+Note 1: The Push Button libraries do not work on this board, so we made our own debounce algorithm to operate the button correctly.
 
       if (digitalRead(2)==LOW)
       {
@@ -117,19 +116,19 @@ Video 2: Serial Distance and Drone Call.
 - Check the propeller order, if the order of the propellers is not correct, the drone will not fly.
 <img src="https://i.ibb.co/QJxjrsX/Correct-Drone-Propeller.png" width="600">
 
-- This drone is very unstable outdoors because the wind affects it, I recommend it only be used for indoor applications.
+- This drone is very unstable outdoors because wind affects it, I recommend for it only to be used for indoor applications.
 
 - I recommend using a protective cage so that the drone is 100% safe.
 
 <img src="https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/01/14/goods_img_big-v1/20190114092657_21926.jpg" width="600">
 
-- If you use the protective cage the drone can not make flips, if you try the drone will fall and hit.
+- If you use the protective cage the drone can not perform flips, if you try them, the drone will fall and hit itself hard.
 
 - Always check the battery level of the drone, if the battery is less than 10% the drone will not take off, also if it is flying and reaches 10% the drone will land.
 
 ## Tello Software:
 
-Libraries that you have to install before continue.
+Libraries that you have to install before continuing.
 
 - https://pypi.org/project/tellopy/
 - https://pypi.org/project/pyserial/
@@ -137,13 +136,13 @@ Libraries that you have to install before continue.
 - https://pypi.org/project/opencv-python/
 - https://pypi.org/project/numpy/
 
-The flight algorithm of the Drone is based on pure programming along with the libraries that were previously commented, the algorithm reviews at all times that there is a human face in front of it and looks for the way to focus and approach.
+The flight algorithm of the Drone is based on pure programming along with the libraries that were previously mentioned. The algorithm reviews at all times that there is a human face in front of it and looks for the way to focus and approach.
 
 Face recognition is done using Face Detection using Haar Cascades, the Haar Cascade file used will be in the "Haar" folder, more information in the link below.
 
 Link: https://docs.opencv.org/3.4.3/d7/d8b/tutorial_py_face_detection.html
 
-It is important to mention, this code provide the method to check all the sensors of the drone, for example the height, the level of the battery, position, etc ... However in the code it is only attached that in the OpenCV screen it will be displayed all the time the level of the battery.
+It is important to mention that this code provides the method to check all the sensors of the drone, for example the height, the level of the battery, position, etc ... However we added that the battery level has to be displayed in the OpenCV screen at all times:
 
     def handler(event, sender, data, **args):
         global prev_flight_data
@@ -163,12 +162,12 @@ It is important to mention, this code provide the method to check all the sensor
             
 <img src="https://i.ibb.co/n0SPQpc/rep.png" width="1000">
 
-The system works like a state machine, because it keeps the state of the machine and as the case requires the command that requires the drone to approach the client, with this type of system we avoid sending commands that are useless to the drone.
+The system works like a state machine, the case requires the command that makes the drone approach the client, with this type of system we avoid sending commands that are useless to the drone.
 
-Lateral Fly Control Diagram (This is the diagram of how the drone moves if you are looking it from the side):
+Lateral Fly Control Diagram (This is the diagram of how the drone moves if you are looking at it from the side):
 <img src="https://i.ibb.co/qmyyPNW/Control.png" width="1000">
 
-Frontal Fly Control Diagram (This is the diagram of how the drone moves if you are looking it from the front):
+Frontal Fly Control Diagram (This is the diagram of how the drone moves if you are looking at it from the front):
 <img src="https://i.ibb.co/nCCYmbw/Frontal-control-diagram.png" width="1000">
 
 ## System Connection Diagram:
@@ -187,11 +186,13 @@ Video: Click on the image:
 
 ## Comments:
 
-Faces are part of inherent identities of people, and identifying individuals through their faces is human nature. Face recognition capability is undoubtedly a key for drones to identify specific individuals or people in general. 
+Faces are part of the inherent identity of people, and identifying individuals through their face has been a great inspiration to developers throughout the years. Face recognition capability is undoubtedly a key for drones to identify specific individuals or people in general. 
 
-The search of missing elderlies or children in the neighborhood, identify dangeorus criminals, etc...
+We have several use cases that we might explore in the future with this technology:
 
-Face recognition on drones would be a vital nowadays to help us to disrupt the UAV (unmanned aerial vehicle) technology.
+The search of missing elders or children in the neighborhood, identifying dangeorus criminals, etc...
+
+Face recognition on drones will be a vital part moving forward, in order to disrupt the UAV (unmanned aerial vehicle) technologies.
 
 ## References:
 
