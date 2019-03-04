@@ -138,7 +138,7 @@ Libraries that you have to install before continuing.
 
 The flight algorithm of the Drone is based on pure programming along with the libraries that were previously mentioned. The algorithm reviews at all times that there is a human face in front of it and looks for the way to focus and approach.
 
-Face recognition is done using Face Detection using Haar Cascades, the Haar Cascade file used will be in the "Haar" folder, more information in the link below.
+Face recognition is done using Face Detection using Haar Cascades, the Haar Cascade file used will be in the "haarcascade" folder, inside "Python Code", more information in the link below.
 
 Link: https://docs.opencv.org/3.4.3/d7/d8b/tutorial_py_face_detection.html
 
