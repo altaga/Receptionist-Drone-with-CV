@@ -112,9 +112,6 @@ Video 2: Serial Distance and Drone Call.
 
 [![Video 2: Serial Distance and Drone Call.](https://i.ibb.co/SBbyjKt/2.png)](https://youtu.be/ojqytcHTXnQ)
 
-
-<img src="https://i.ibb.co/NnVwsLg/img.png" width="1000">
-
 ## Tello Important Considerations:
 
 - Check the propeller order, if the order of the propellers is not correct, the drone will not fly.
