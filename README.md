@@ -17,6 +17,7 @@ Always use technology to improve the world, if you are a black hat or gray hat h
 * [Materials](#materials)
 * [Spresense Hardware](#spresense-hardware)
 * [Spresense Software](#spresense-software)
+* [Videos demonstrated the operation](#videos-demonstrated-the-operation:)
 * [Tello Important Features](#tello-important-features)
 * [Tello Software](#tello-software)
 * [System Connection Diagram](#system-connection-diagram)
@@ -115,24 +116,103 @@ In our analogRead(A0) we will obtain a value of 10 bits between 0 and 1024, but 
 Once we have the value on the variable analog we set the volume in each cycle of void loop ()
 
 - The speaker will provide us the output of the message that will be played to the customers.
-- The button is used to activate the serial port to send the message that will call the Drone.
-- The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
 
-Note 1: The Push Button libraries do not work on this board, so we made our own debounce algorithm to operate the button correctly.
+All the sound reproduction logic is done automatically thanks to the example code "Player" besides the audio file has to be called "Sound.mp3" and obviously be in mp3 format.
 
-      if (digitalRead(2)==LOW)
-      {
-        delay(10);
-        if((digitalRead(2)==LOW))
-        {
-          puts("Calling Drone");
-          delay(3000);
-        }
+However, we have to play the audio every time a client comes close to the device, so we need restart this audio every so often.
+
+       if (distance<2 && counter2==201)
+       {
+          // Start the audio if the distance is less than 2
+         theAudio->startPlayer(AudioClass::Player0);
+         puts("Play!"); 
+         counter2=0;
+       }
+       if (counter2<200)
+       {
+         counter2++;
+       }
+       else if (counter2==200)
+       {
+       counter2++;
+       theAudio->stopPlayer(AudioClass::Player0);
+       myFile.close();
+       myFile = theSD.open("Sound.mp3");
+       puts("Reset Audio");
       }
 
-Note 2: The MB1040 has an analog output which has to be converted to distance, the part of the code that performs this conversion is the following, the distance is shown in meters.
+The audio starts to play if the distance with the client is less than 2 meters, in turn the audio will restart once our variable "counter2" reaches 200, approximately 20 seconds.
 
-    distance=((sensorValue*0.00976*3)/0.3858); 
+- The button is used to activate the serial port to send the message that will call the Drone.
+
+The Push Button libraries do not work on this board, so we made our own debounce algorithm to operate the button correctly.
+
+       if (digitalRead(2)==LOW)
+        {
+          delay(10);
+          if((digitalRead(2)==LOW))
+          {
+            puts("Calling Drone");
+            delay(3000);
+          }
+        }
+
+- Send the value in meters of the MB1040 sensor by serial.
+
+To be able to send anything through Serial, it is necessary to use the "puts" command, instead of the classic "Serial.println()", unlike this command to be able to print variables of "int" type in serial, it is necessary to convert the int variable into a char* array, this can not be done automatically unless the following function.
+
+      char* string2char(String command){
+         if(command.length()!=0){
+             char *p = const_cast<char*>(command.c_str());
+             return p;
+         }
+      }
+
+Now with this function we can call it in the following way to be able to print variables "int" type by serial.
+
+       if(counter==9)
+       {
+        sensorValue/=10;  
+        distance=((sensorValue*0.00976*3)/0.3858); 
+        counter=0;
+        sensorValue=0;
+        puts(string2char(String(distance))); //This is the correct way to call the function
+       }
+
+
+- The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
+
+To initialize the drone, we must send the following message by serial, this can be modified by the developer as desired.
+
+       puts("Calling Drone");
+
+Before we can call the drone with a serial command, we will have to know what is the COMXX port that the board has on our computer, this we will review with our ArduinoIDE.
+
+<img src="https://hackster.imgix.net/uploads/attachments/789318/imagen_igPOPBXF3O.png?auto=compress%2Cformat&w=740&h=555&fit=max" width="800">
+
+In the case of having several active serial ports, check which are the active ports.
+
+<img src="https://hackster.imgix.net/uploads/attachments/789323/imagen_XqE3HNWYFl.png?auto=compress%2Cformat&w=740&h=555&fit=max" width="800">
+
+Disconnect the Spresence and check which port has disappeared.
+
+<img src="https://hackster.imgix.net/uploads/attachments/789326/imagen_qbtnXLKCQV.png?auto=compress%2Cformat&w=740&h=555&fit=max" width="800">
+
+In this case the Spresense is in COM11, this data will be used in our Python code to receive serial commands from this port, the Baudrate of the Spresense is 115200 bauds.
+
+      ser = serial.Serial("COM11", 115200)
+
+So that the drone takes off just when we send the command and not before. We will have to put it in a while loop until it receives the message from the board by serial as shown below.
+
+         while star==1:
+             cc=str(ser.readline())
+             if cc[2:][:-5]=="Calling Drone":
+                 print(cc[2:][:-5])
+                 star=2
+                 break
+
+
+## Videos demonstrated the operation:
 
 Video 1: Detection, Volume and Speaker.
 
