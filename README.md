@@ -1,6 +1,5 @@
 # Receptionist Drone with CV
 
-## Elevator Pitch:
 Receptionist drone, have a flying assistant show you the way to the lobby. Powered by Sony Spresense.
 
 ## Story
