@@ -77,7 +77,7 @@ Since we are using the Arduino IDE, we will have to carry out this procedure to 
 <img src="https://i.ibb.co/qB2hGhY/Capture.png" width="800">
 - Select option 1 to mount the decoder to the SD.
 <img src="https://i.ibb.co/cQMv76Z/Capture1.png" width="800">
-- Once this is done, you can flash the code in the "Arduino Code" folder on the board.
+- Once this is done, you can flash the code in the "Arduino Code" folder on the board, named "PlayerFull".
 
 We attached some videos of the operation of the system, which has the following functions.
 
