@@ -75,9 +75,9 @@ Since we connect the board to the Arduino IDE, we will have to carry out a previ
 - Open the following example code of the Arduino IDE.
 <img src="https://i.ibb.co/Dp56GW1/Spresense-2.png" width="800">
 - Flash the code on the board and opens the serial monitor.
-// Serial monitor image
+<img src="https://i.ibb.co/qB2hGhY/Capture.png" width="800">
 - Select option 1 to mount the decoder to the SD.
-// Image of the option.
+<img src="https://i.ibb.co/cQMv76Z/Capture1.png" width="800">
 - Once this is done, you can flash the code in the "Arduino Code" folder on the board.
 
 We attach some videos of the operation of the system, which has the following functions.
