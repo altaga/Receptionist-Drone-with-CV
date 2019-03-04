@@ -1,4 +1,10 @@
 # Receptionist Drone with CV
+
+## Elevator Pitch:
+Receptionist drone, have a flying assistant show you the way to the lobby. Powered by Sony Spresense.
+
+## Story
+
 We have seen many applications for drones; races, shows, and several others. But we have never seen a more social drone application. That is why we will make, perhaps the first receptionist drone in the world.
 
 <img src="https://i.ibb.co/NnVwsLg/img.png" width="1000">
@@ -79,10 +85,35 @@ Since we are using the Arduino IDE, we will have to carry out this procedure to 
 <img src="https://i.ibb.co/cQMv76Z/Capture1.png" width="800">
 - Once this is done, you can flash the code in the "Arduino Code" folder on the board, named "PlayerFull".
 
-We attached some videos of the operation of the system, which has the following functions.
+We attached some videos of the operation of the system, but first check what the code does, enjoy it!
 
 - The MB1040 sensor will be used to detect when there is a customer near the device.
+
+The MB1040 has an analog output which has to be converted to distance, the formula by performing the corresponding convertion is the following.
+
+<img src="https://i.ibb.co/RBKhd0r/Code-Cogs-Eqn.gif" width="800">
+<img src="https://i.ibb.co/ZmH9mNF/Code-Cogs-Eqn-1.gif" width="800">
+
+The part of the code that performs this conversion is the following, the distance is shown in meters.
+
+      distance=((sensorValue*0.00976*3)/0.3858); 
+
 - The potentiometer will help us to modify the volume of the system easily.
+
+Because the system works with digitally controlled volume, we will have to use an ADC system with a potentiometer to be able to modify the volume value analogically, this type of voltage control by a potentiometer is called a voltage divider.
+
+<img src="https://hackster.imgix.net/uploads/attachments/789257/imagen_BVTlQgx8yM.png?auto=compress%2Cformat&w=1280&h=960&fit=max" width="800">
+
+With our voltage divider installed, we will read the value of the voltage in the central pin, which according to its position will oscillate between 0 and 5 volts.
+
+In our analogRead(A0) we will obtain a value of 10 bits between 0 and 1024, but since these values are not valid for the setVolume command, we had to make a map transforming the read range to a range between -800 to - 100
+
+       analog=analogRead(A0);
+       analog = map(analog, 0, 1023, -800, -100);
+       theAudio->setVolume(analog);
+
+Once we have the value on the variable analog we set the volume in each cycle of void loop ()
+
 - The speaker will provide us the output of the message that will be played to the customers.
 - The button is used to activate the serial port to send the message that will call the Drone.
 - The connection to the raspberry or the pc will provide us the serial communication with Python to call the Drone.
