@@ -16,7 +16,7 @@ Always use technology to improve the world, if you are a black hat or gray hat h
 * [Materials](#materials)
 * [Spresense Hardware](#spresense-hardware)
 * [Spresense Software](#spresense-software)
-* [Videos demonstrated the operation](#videos-demonstrated-the-operation:)
+* [Videos demonstrated the operation](#videos-demonstrated-the-operation)
 * [Tello Important Features](#tello-important-features)
 * [Tello Software](#tello-software)
 * [System Connection Diagram](#system-connection-diagram)
