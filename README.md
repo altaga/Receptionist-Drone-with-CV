@@ -187,6 +187,12 @@ Video: Click on the image:
 
 ## Comments:
 
+Faces are part of inherent identities of people, and identifying individuals through their faces is human nature. Face recognition capability is undoubtedly a key for drones to identify specific individuals or people in general. 
+
+The search of missing elderlies or children in the neighborhood, identify dangeorus criminals, etc...
+
+Face recognition on drones would be a vital nowadays to help us to disrupt the UAV (unmanned aerial vehicle) technology.
+
 ## References:
 
 All the information about the technology used, and direct references are in our wiki:
